@@ -1,6 +1,10 @@
-###IMPORTS####
+## Summary:
+#Takes a command line argument protNum corresponding to index of query protein in queryProts.txt file.
+#Creates a file with name benchmarking/*queryProtein*, with a ranked list of LDDTs between query protein and all reference proteins
 
 
+
+###Imports####
 import copy
 import sys
 import math
@@ -193,6 +197,6 @@ if __name__ == "__main__":
     sorted_lddt_scores = sorted(lddtDict.items(), key=lambda x: x[1], reverse=True)
 
     filename = f"{relevantProt}.txt"
-    with open(f"benchDihedral/{filename}", "w") as file:
+    with open(f"benchmarking/{filename}", "w") as file:
         for pair, score in sorted_lddt_scores:
             file.write(f"{pair[0]} {pair[1]} {score}\n")
