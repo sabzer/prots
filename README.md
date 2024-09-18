@@ -1,1 +1,1 @@
-Constructing a blurry neighborhood-based structure alphabet
+# Constructing a blurry neighborhood-based structure alphabet
